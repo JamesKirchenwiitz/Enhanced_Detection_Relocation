@@ -8,7 +8,7 @@ An Advanced Detection and Relocation Workflow for Characterizing Seismicity Asso
 
 This repository contains a general-purpose workflow for detecting and precisely relocating earthquakes using template matching and double-difference relocation. Starting from a sparse seismic catalog and continuous waveform data, the workflow expands the catalog well beyond what standard detection methods find, then relocates events with high enough precision to resolve fault geometry at depth.
 
-It was developed and tested on hydraulic-fracturing-induced seismicity in the Karnes Trough Fault Zone (KTFZ) of the Eagle Ford Shale, Texas, but the underlying steps — template matching, pick correction, absolute location, double-difference relocation, and fault-plane fitting — are not specific to that dataset. The workflow is meant to be applied to any region with a moderately dense seismic network and a starting catalog, induced or tectonic.
+It was developed and tested on hydraulic-fracturing-induced seismicity in the Karnes Trough Fault Zone (KTFZ) of the Eagle Ford Shale, Texas, but the underlying steps (template matching, pick correction, absolute location, double-difference relocation, and fault-plane fitting) are not specific to that dataset. The workflow is meant to be applied to any region with a moderately dense seismic network and a starting catalog, induced or tectonic.
 
 The repository is set up so that the exact parameters, thresholds, and inputs used in the paper are preserved and clearly labeled, so anyone can reproduce our results directly — while also making it straightforward to swap in your own catalog, stations, and region to run the workflow on your own data.
 
