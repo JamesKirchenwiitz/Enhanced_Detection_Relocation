@@ -12,23 +12,24 @@ It was developed and tested on hydraulic-fracturing-induced seismicity in the Ka
 
 The repository is set up so that the exact parameters, thresholds, and inputs used in the paper are preserved and clearly labeled, so anyone can reproduce our results directly — while also making it straightforward to swap in your own catalog, stations, and region to run the workflow on your own data.
 
-What the Workflow Does
+## What the Workflow Does
 
-1. The workflow runs in six general steps. Each is written to work on any region/catalog, with the parameters used in the paper documented alongside the code so our results can be reproduced exactly.
+The workflow runs in six general steps. Each is written to work on any region/catalog, with the parameters used in the paper documented alongside the code so our results can be reproduced exactly.
 
-2. Catalog retrieval — Pull an existing earthquake catalog and phase picks for your region and time period of interest. This is your starting point — it can be small; the point of the workflow is to expand it.
+1. Catalog retrieval — Pull an existing earthquake catalog and phase picks for your region and time period of interest. This is your starting point: it can be small; the point of the workflow is to expand it.
 
-3. Multistation template matching — Use each catalog event as a "template" and scan continuous waveform data for waveforms that match it, using multiple stations.
+2. Multistation template matching — Use each catalog event as a "template" and scan continuous waveform data for waveforms that match it, using multiple stations.
   
-4. Because match quality (correlation coefficient) varies template to template, the workflow determines a statistically-derived, template-specific detection threshold automatically rather than relying on one fixed cutoff for the whole catalog.
+3. Because match quality (correlation coefficient) varies template to template, the workflow determines a statistically-derived, template-specific detection threshold automatically rather than relying on one fixed cutoff for the whole catalog.
 
-5. Pick correction & propagation — Automated arrival-time picks are often unreliable, so this step corrects picks on template events and propagates accurate timing to every matched event using waveform cross-correlation.
+4. Pick correction & propagation — Automated arrival-time picks are often unreliable, so this step corrects picks on template events and propagates accurate timing to every matched event using waveform cross-correlation.
 
-6. Preliminary absolute location — Compute an initial location for every newly detected event using the corrected picks and a 1-D velocity model for your region.
+5. Preliminary absolute location — Compute an initial location for every newly detected event using the corrected picks and a 1-D velocity model for your region.
 
-7. Double-difference relocation (HypoDD) — Refine all hypocenters together, using both catalog timing and cross-correlation-derived differential times, to dramatically sharpen the relative positions of nearby events.
+6. Double-difference relocation (HypoDD) — Refine all hypocenters together, using both catalog timing and cross-correlation-derived differential times, to dramatically sharpen the relative positions of nearby events.
 
-8. Fault geometry analysis: Can fit the relocated hypocenters to planar fault structures using RANSAC regression, which is robust to the vertical scatter/noise common in relocated depth estimates.
+Optional Codes:
+Fault geometry analysis: Can fit the relocated hypocenters to planar fault structures using RANSAC regression, which is robust to the vertical scatter/noise common in relocated depth estimates.
 
 A single-template and a multi-template ("mults") mode are both included. The latter lets you combine and relocate several nearby template families relative to one another, which is useful for resolving fault segments that individual templates alone can't distinguish.
 
