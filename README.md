@@ -1,10 +1,10 @@
-#Earthquake Detection & Relocation Workflow
+# Earthquake Detection & Relocation Workflow
 
-###Code accompanying:
+### Code accompanying:
 
-An Advanced Detection and Relocation Workflow for Characterizing Seismicity Associated with Hydraulic Fracturing in the Eagle Ford Shale Play, Texas James C. Kirchenwitz, Michael R. Brudzinski, Keiana Mazzio, Mehrnaz Khalkhali
+An Advanced Detection and Relocation Workflow for Characterizing Seismicity Associated with Hydraulic Fracturing in the Eagle Ford Shale Play, Texas James C. Kirchenwitz, Michael R. Brudzinski, Keiana Mazzio, Mehrnaz Khalkhali (_In Prep_)
 
-###Overview
+### Overview
 
 This repository contains a general-purpose workflow for detecting and precisely relocating earthquakes using template matching and double-difference relocation. Starting from a sparse seismic catalog and continuous waveform data, the workflow expands the catalog well beyond what standard detection methods find, then relocates events with high enough precision to resolve fault geometry at depth.
 
@@ -25,16 +25,17 @@ What the Workflow Does
 5. Pick correction & propagation — Automated arrival-time picks are often unreliable, so this step corrects picks on template events and propagates accurate timing to every matched event using waveform cross-correlation.
 
 6. Preliminary absolute location — Compute an initial location for every newly detected event using the corrected picks and a 1-D velocity model for your region.
-Double-difference relocation (HypoDD) — Refine all hypocenters together, using both catalog timing and cross-correlation-derived differential times, to dramatically sharpen the relative positions of nearby events.
 
-7. Fault geometry analysis — Fit the relocated hypocenters to planar fault structures using RANSAC regression, which is robust to the vertical scatter/noise common in relocated depth estimates.
+7. Double-difference relocation (HypoDD) — Refine all hypocenters together, using both catalog timing and cross-correlation-derived differential times, to dramatically sharpen the relative positions of nearby events.
 
-A single-template and a multi-template ("mults") mode are both included — the latter lets you combine and relocate several nearby template families relative to one another, which is useful for resolving fault segments that individual templates alone can't distinguish.
+8. Fault geometry analysis: Can fit the relocated hypocenters to planar fault structures using RANSAC regression, which is robust to the vertical scatter/noise common in relocated depth estimates.
+
+A single-template and a multi-template ("mults") mode are both included. The latter lets you combine and relocate several nearby template families relative to one another, which is useful for resolving fault segments that individual templates alone can't distinguish.
 
 ## Workflow Summary of Steps:
 ![Flow Chart](https://github.com/JamesKirchenwiitz/Detection-and-Relocation-Workflow/blob/main/workflow.png)
 
-###Applying This to Your Own Data
+### Applying This to Your Own Data
 
 To run this workflow on a different region, you'll generally need to supply:
 
