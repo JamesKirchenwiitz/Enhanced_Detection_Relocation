@@ -4,7 +4,14 @@
 
 An Advanced Detection and Relocation Workflow for Characterizing Seismicity Associated with Hydraulic Fracturing in the Eagle Ford Shale Play, Texas James C. Kirchenwitz, Michael R. Brudzinski, Keiana Mazzio, Mehrnaz Khalkhali (_In Prep_)
 
-### Overview
+## Repository Contents:
+edet/ (enhanced detection)
+- Multi-station template matching and automated threshold determination
+
+proc/ (processing)
+- Directory containing manual pick correction, pick propogation, and double-difference relocation
+
+## Overview:
 
 This repository contains a general-purpose workflow for detecting and precisely relocating earthquakes using template matching and double-difference relocation. Starting from a sparse seismic catalog and continuous waveform data, the workflow expands the catalog well beyond what standard detection methods find, then relocates events with high enough precision to resolve fault geometry at depth.
 
