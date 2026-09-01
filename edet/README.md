@@ -1,4 +1,4 @@
-# edet — Earthquake Detection (Template Matching)
+# edet: Earthquake Detection (Template Matching)
 
 Scripts for building a seismic catalog into a set of templates, running multistation template matching against continuous waveform data, and combining/visualizing the results.
 
@@ -17,7 +17,10 @@ Queries the USGS earthquake catalog (rectangular or radius search) for events ma
 **Output:** a CSV of catalog events, written as `getcatpy.<input>.csv`. This file is the template list that feeds template matching in the next step.
 
 ```bash
-python get.cat.py [options]
+python get.cat.py
+OR
+get.cat.py
+(depends on system)
 ```
 
 ---
@@ -34,10 +37,10 @@ Runs multistation template matching: scans continuous waveform data for each eve
 hpc.detect.3sta.local.csh <label>
 ```
 
-**Example:** if your catalog file is `getcatpy.2023feb09.csv`, run:
+**Example:** if your catalog file is `getcatpy.soutx.csv`, run:
 
 ```bash
-hpc.detect.3sta.local.csh 2023feb09
+hpc.detect.3sta.local.csh soutx
 ```
 
 ---
@@ -50,10 +53,10 @@ Combines all per-template match files from step 2 into a single master file.
 combine.lcurve.bytemp.csh <label>
 ```
 
-**Example:** continuing with `2023feb09`, this produces:
+**Example:** continuing with `soutx`, this produces:
 
 ```
-2023feb09.combine.bytemp.txt
+soutx.combine.bytemp.txt
 ```
 
 ---
@@ -71,4 +74,4 @@ plot.wf.mag.match.csh <label>
 ## Notes
 
 - Run the scripts in the order above — each step consumes the output of the one before it.
-- Use the same `<label>` (e.g. `2023feb09`) consistently across steps 2–4 so file names line up correctly.
+- Use the same `<label>` (e.g. `soutx`) consistently across steps 2–4 so file names line up correctly.
