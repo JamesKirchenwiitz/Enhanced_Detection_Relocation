@@ -25,7 +25,7 @@ The repository is set up so that the exact parameters, thresholds, and inputs us
 
 The workflow runs in six general steps. Each is written to work on any region/catalog, with the parameters used in the paper documented alongside the code so our results can be reproduced exactly.
 
-1. Catalog retrieval: Pull an existing earthquake catalog and phase picks for your region and time period of interest. This is your starting point: it can be small; the point of the workflow is to expand it.
+1. Catalog retrieval: Pull an existing earthquake catalog and phase picks for your region and time period of interest. This is your starting point: it can be small, the point of the workflow is to expand it.
 
 2. Multistation template matching: Use each catalog event as a "template" and scan continuous waveform data for waveforms that match it, using multiple stations.
   
