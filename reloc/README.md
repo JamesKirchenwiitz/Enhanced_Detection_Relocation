@@ -7,7 +7,7 @@ There are two entry points, depending on whether you're relocating a single temp
 - **`runme.csh`** - runs the full pipeline for one template
 - **`runme.mult.csh`** - runs the full pipeline for a multi-template ("mult") combination
 
-Generally you must run a group of single templates that then can be combined how you see fit. Both scripts are orchestrators: they call out to a series of helper scripts in order, each of which can also be run manually/skipped if its output already exists (see comments in each script).
+Generally you must run a group of single templates that can then be combined how you see fit. Both scripts are orchestrators: they call out to a series of helper scripts in order, each of which can also be run manually/skipped if its output already exists (see comments in each script).
 
 ---
 
