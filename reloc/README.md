@@ -19,7 +19,7 @@ runme.csh <template_epoch>
 
 **`<template_epoch>`** is the epoch time of the template event (e.g. `1738207596`).
 
-### Pipeline steps
+### Pipeline steps:
 
 | Step | Script | Purpose |
 |---|---|---|
@@ -27,7 +27,7 @@ runme.csh <template_epoch>
 | 2 | `get.sac.csh <temp>` | Retrieves SAC waveform files for the template and its matches. *(Skip if SAC files already exist.)* |
 | 3 | `wfcorr.multi.csh <temp>` | Cross-correlates waveforms across matches. *(Skip if `tempcor`/lag files already exist.)* |
 | 4 | `align.csh <temp>` | Aligns waveforms using the cross-correlation lag times. *(Skip if already aligned.)* |
-| 5 | `wfcorr.multi.csh <temp>` (again) | Re-runs cross-correlation on the now-aligned waveforms for improved precision. |
+| 5 | `wfcorr.multi.csh <temp>` | Re-runs cross-correlation on the now-aligned waveforms for improved precision. |
 | 6 | `eloc2phawei.csh <temp>` | Computes preliminary absolute locations for the template and matches. |
 | 7 | `dt.cc.uneven.csh <temp>` | Builds the differential-time (`dt.cc`) input file for HypoDD from the cross-correlation results. |
 | 8 | `hypodd.csh <temp>` | Runs HypoDD double-difference relocation. |
