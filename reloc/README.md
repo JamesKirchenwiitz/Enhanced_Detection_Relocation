@@ -1,17 +1,17 @@
-# proc — Relocation (HypoDD)
+# proc: Relocation (HypoDD)
 
 Scripts for taking a set of template matches and running them through the full double-difference relocation pipeline: pulling matches, retrieving waveforms, cross-correlating and aligning them, computing preliminary locations, and relocating with HypoDD.
 
 There are two entry points, depending on whether you're relocating a single template or a combined group of templates:
 
-- **`runme.csh`** — runs the full pipeline for one template
-- **`runme.mult.csh`** — runs the full pipeline for a multi-template ("mult") combination
+- **`runme.csh`** - runs the full pipeline for one template
+- **`runme.mult.csh`** - runs the full pipeline for a multi-template ("mult") combination
 
 Both scripts are orchestrators: they call out to a series of helper scripts in order, each of which can also be run manually/skipped if its output already exists (see comments in each script).
 
 ---
 
-## `runme.csh` — Single-Template Relocation
+## `runme.csh` - Single-Template Relocation
 
 ```bash
 runme.csh <template_epoch>
@@ -39,7 +39,7 @@ runme.csh <template_epoch>
 
 ---
 
-## `runme.mult.csh` — Multi-Template Relocation
+## `runme.mult.csh` - Multi-Template Relocation
 
 ```bash
 runme.mult.csh <mult_id>
@@ -60,7 +60,7 @@ runme.mult.csh <mult_id>
 | 7 | `mapx.hypodd.multi.abs.tn.coupe.csh <mult>` | Map-view plot with cross-section ("coupe") by template number. |
 | 8 | `map.hypodd.multi.wide.csh <mult>` | Wide-area map-view plot of relocated events. |
 
-**Optional/skippable:** `wfcorr.multi.multi.csh <mult>` (cross-correlation across the combined group) is commented out by default — only needed if you're relocating a fresh combination of templates whose pairwise correlations haven't been computed yet.
+**Optional/skippable:** `wfcorr.multi.multi.csh <mult>` (cross-correlation across the combined group) is commented out by default. This is only needed if you're relocating a fresh combination of templates whose pairwise correlations haven't been computed yet. Drastically increases computation time.
 
 ---
 
