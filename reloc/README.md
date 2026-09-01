@@ -1,4 +1,4 @@
-# proc: Relocation (HypoDD)
+# reloc: Relocation (HypoDD)
 
 Scripts for taking a set of template matches and running them through the full double-difference relocation pipeline: pulling matches, retrieving waveforms, cross-correlating and aligning them, computing preliminary locations, and relocating with HypoDD.
 
