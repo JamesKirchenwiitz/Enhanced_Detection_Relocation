@@ -73,5 +73,5 @@ plot.wf.mag.match.csh <label>
 
 ## Notes
 
-- Run the scripts in the order above — each step consumes the output of the one before it.
+- Run the scripts in the order above; each step consumes the output of the one before it.
 - Use the same `<label>` (e.g. `soutx`) consistently across steps 2–4 so file names line up correctly.
