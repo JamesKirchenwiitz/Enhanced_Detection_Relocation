@@ -5,11 +5,13 @@
 An Advanced Detection and Relocation Workflow for Characterizing Seismicity Associated with Hydraulic Fracturing in the Eagle Ford Shale Play, Texas James C. Kirchenwitz, Michael R. Brudzinski, Keiana Mazzio, Mehrnaz Khalkhali (_In Prep_)
 
 ## Repository Contents:
-edet/ (enhanced detection)
+[`edet/`](edet/README.md) (enhanced detection)
 - Multi-station template matching and automated threshold determination
 
-reloc/ (relocation processing)
+[`reloc/`](reloc/README.md) (relocation processing)
 - Directory containing manual pick correction, pick propogation, and double-difference relocation
+
+Each subdirectory has its own README with detailed, script-by-script usage instructions.
 
 ## Overview:
 
@@ -50,5 +52,3 @@ To run this workflow on a different region, you'll generally need to supply:
 A starting earthquake catalog with phase picks for your area of interest
 Continuous waveform data from at least 3 nearby stations
 A local 1-D velocity model for absolute location and HypoDD
-
-See the paper's Data Collection and Workflow Development sections for the specific inputs and parameter choices we used, which are documented in the code as a reference configuration.
