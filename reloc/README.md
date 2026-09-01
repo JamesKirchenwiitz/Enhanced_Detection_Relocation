@@ -35,7 +35,7 @@ runme.csh <template_epoch>
 
 **Optional/manual checks** (commented out by default): `plot.wf.mag.match.temp.chas.ws.csh <temp> <station>` can be run after steps 2 and 4 to visually confirm waveform alignment before proceeding.
 
-**Note on template numbers/labels:** in `matches.<temp>.txt`, the last field (`$7`) is the template ID — this is how matches for a specific template are pulled from a larger combined match file (e.g. `karnescluster2.combine.bytemp.txt`) via `awk`.
+**Note on template numbers/labels:** in `matches.<temp>.txt`, the last field (`$7`) is the template ID — this is how matches for a specific template are pulled from a larger combined match file (e.g. `soutx.combine.bytemp.txt`) via `awk`.
 
 ---
 
