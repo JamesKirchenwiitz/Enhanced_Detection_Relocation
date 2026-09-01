@@ -49,6 +49,6 @@ A single-template and a multi-template ("mults") mode are both included. The lat
 
 To run this workflow on a different region, you'll generally need to supply:
 
-A starting earthquake catalog with phase picks for your area of interest
-Continuous waveform data from at least 3 nearby stations
-A local 1-D velocity model for absolute location and HypoDD
+- A starting earthquake catalog with phase picks for your area of interest
+- Continuous waveform data from at least 3 nearby stations
+- A local 1-D velocity model for absolute location and HypoDD
