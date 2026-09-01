@@ -8,7 +8,7 @@ An Advanced Detection and Relocation Workflow for Characterizing Seismicity Asso
 edet/ (enhanced detection)
 - Multi-station template matching and automated threshold determination
 
-proc/ (processing)
+reloc/ (relocation processing)
 - Directory containing manual pick correction, pick propogation, and double-difference relocation
 
 ## Overview:
