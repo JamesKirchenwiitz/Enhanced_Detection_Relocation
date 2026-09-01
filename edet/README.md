@@ -1,4 +1,4 @@
-# edet: Earthquake Detection (Template Matching)
+# edet: Enhanced Detection (Template Matching)
 
 Scripts for building a seismic catalog into a set of templates, running multistation template matching against continuous waveform data, and combining/visualizing the results.
 
