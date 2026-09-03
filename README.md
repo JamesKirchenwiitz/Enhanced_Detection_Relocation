@@ -19,11 +19,11 @@ This repository contains a general-purpose workflow for detecting and precisely 
 
 It was developed and tested on hydraulic-fracturing-induced seismicity in the Karnes Trough Fault Zone (KTFZ) of the Eagle Ford Shale, Texas, but the underlying steps (template matching, pick correction, absolute location, double-difference relocation, and fault-plane fitting) are not specific to that dataset. The workflow is meant to be applied to any region with a moderately dense seismic network and a starting catalog, induced or tectonic.
 
-The repository is set up so that the exact parameters, thresholds, and inputs used in the paper are preserved and clearly labeled, so anyone can reproduce our results directly — while also making it straightforward to swap in your own catalog, stations, and region to run the workflow on your own data.
+The repository is set up so that the exact parameters, thresholds, and inputs used in the paper are preserved and clearly labeled, making it straightforward to swap in your own catalog, stations, and region to run the workflow on your own data.
 
 ## What the Workflow Does
 
-The workflow runs in six general steps. Each is written to work on any region/catalog, with the parameters used in the paper documented alongside the code so our results can be reproduced exactly.
+The workflow runs in six general steps. Each is written to work on any region/catalog, with the parameters used in the paper documented alongside the code so our results can be reproduced.
 
 1. Catalog retrieval: Pull an existing earthquake catalog and phase picks for your region and time period of interest. This is your starting point: it can be small, the point of the workflow is to expand it.
 
