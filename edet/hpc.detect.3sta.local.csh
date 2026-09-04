@@ -27,7 +27,7 @@ if ( ! -e logs ) mkdir logs
 
 # original getcatpy output
 set incsv=getcatpy.$num.csv
-set et=`echo 2020-01-01 | toepoch.csh`
+set et=`echo 2020-01-01 | ../dependencies/toepoch.csh`
 
 awk -F "," 'NR>1{OFMT="%.6f";print ($1-et)/86400/365.25+2020,$3,$4,$6,$5,$1,"1970-01-01 00:00:00 getcatpy"}' et=$et $incsv >! $incsv:r.txt 
 
