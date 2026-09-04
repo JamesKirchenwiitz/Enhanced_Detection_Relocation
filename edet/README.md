@@ -71,6 +71,16 @@ plot.wf.mag.match.csh <label>
 
 ---
 
+---
+
+### 5. `get.quakeml.csh`
+
+Generates event files that contain picks needed for relocation
+
+```bash
+get.quakeml.csh
+```
+
 ## Notes
 
 - Run the scripts in the order above; each step consumes the output of the one before it.
