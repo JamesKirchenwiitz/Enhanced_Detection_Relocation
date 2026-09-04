@@ -79,6 +79,7 @@ for pick in picks:
         chas=[cha1s[s],cha2s[s],cha3s[s]]
         s += 1
         for cha in chas:
+         # Change filename path below to where ever you raw waveform data is stored:
             filename = "data/"+sta+"/"+str(pick.year)+"/"+sta+"."+net+"."+loc+"."+cha+"."+str(pick.year)+"."+str("%03d" % pick.julday)
             if os.path.getsize(filename) != 0:
                 i += 1
@@ -119,6 +120,7 @@ for yr in range(yr1, yr2+1):
             print(cha1s[s],cha2s[s],cha3s[s])
             s += 1
             for cha in chas:
+             # Change filename below to filepath where data is stored
                 filename = "data/"+sta+"/"+str(yr)+"/"+sta+"."+net+"."+loc+"."+cha+"."+str(yr)+"."+str("%03d" % jd)
                 if os.path.exists(filename):
                     if os.path.getsize(filename) != 0:
