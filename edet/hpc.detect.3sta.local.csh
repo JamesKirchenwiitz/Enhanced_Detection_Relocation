@@ -32,7 +32,7 @@ set et=`echo 2020-01-01 | toepoch.csh`
 awk -F "," 'NR>1{OFMT="%.6f";print ($1-et)/86400/365.25+2020,$3,$4,$6,$5,$1,"1970-01-01 00:00:00 getcatpy"}' et=$et $incsv >! $incsv:r.txt 
 
 awk '{print $2,$3,$5}' $incsv:r.txt >! eq.loc
-set eqloc=`awk -f /mnt/raya/awk/meanline.awk eq.loc | awk '{print $2"/"$1"/K"}'`
+set eqloc=`awk -f ../dependencies/meanline.awk eq.loc | awk '{print $2"/"$1"/K"}'`
 
 # Specifying station name
 echo -n "" >! sta.loc
