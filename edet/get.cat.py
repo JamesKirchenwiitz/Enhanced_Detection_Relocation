@@ -27,8 +27,7 @@ endtime = UTCDateTime("2023-11-01T00:00:00")
 ###################
 
 # Box search (these are the settings used for KTFZ)
-events = client.get_events(starttime=starttime, endtime=endtime, minlatitude=28.65, maxlatitude=29.35, minlongitude=-98.5, maxlongitude=-97.35, minmagnitude=0)
-
+events = client.get_events(starttime=starttime, endtime=endtime, minlatitude=29.02, maxlatitude=29.1, minlongitude=-97.9, maxlongitude=-97.8, minmagnitude=0)
 # Radius search
 #events = client.get_events(starttime=starttime, endtime=endtime, latitude=28.939, longitude=-98.037,
 #maxradius = 0.09, minmagnitude = 2)
