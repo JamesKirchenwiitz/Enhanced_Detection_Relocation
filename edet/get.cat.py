@@ -18,12 +18,9 @@ import datetime as dt
 client = Client("USGS") 
 
 # specify duration of catalog search
-starttime = UTCDateTime("2020-01-01T00:00:00")
-endtime = UTCDateTime("2025-04-01T00:00:00")
+starttime = UTCDateTime("2023-09-01T00:00:00")
+endtime = UTCDateTime("2023-11-01T00:00:00")
 
-
-starttime = UTCDateTime("2019-01-01T00:00:00")
-endtime = UTCDateTime("2020-01-01T00:00:00")
 
 ###################
 # Reading in events
